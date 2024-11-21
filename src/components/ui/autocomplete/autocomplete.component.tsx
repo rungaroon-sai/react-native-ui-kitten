@@ -170,6 +170,7 @@ export class Autocomplete extends React.Component<AutocompleteProps, State> {
     this.blur();
     this.inputRefAnchor.current?.blur();
     this.setOptionsListInvisible();
+    this.props.onFocus?.();
   };
 
   private onItemPress = (index: number): void => {
